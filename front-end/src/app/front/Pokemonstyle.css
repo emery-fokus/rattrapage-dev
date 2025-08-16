@@ -1,0 +1,169 @@
+/* 🧩 Conteneur principal des cartes Pokémon */
+.pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* 📦 Carte individuelle */
+.pokemon-card {
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    width: 220px;
+    color: #fff;
+    background-color: #444;
+    /* Couleur de fond par défaut */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🏷️ Nom du Pokémon */
+.pokemon-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: inherit;
+    /* prendra la couleur selon le type de la carte */
+}
+
+/* 🆔 ID du Pokémon */
+/* 🆔 ID du Pokémon */
+.pokemon-id {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #222;
+    /* couleur par défaut pour être lisible */
+    background: rgba(255, 255, 255, 0.6);
+    /* petit fond clair */
+    padding: 2px 6px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* 🖼️ Image principale */
+.pokemon-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 0.5rem auto;
+}
+
+/* 🧍 Sprites (normal ou shiny) */
+.pokemon-sprite {
+    width: 60px;
+    margin-top: 0.5rem;
+}
+
+/* 🌈 Couleurs par type (type1 utilisé pour styliser la carte) */
+.type-fire {
+    background: #f08030;
+    color: #fff;
+}
+
+.type-water {
+    background: #6890f0;
+    color: #fff;
+}
+
+.type-grass {
+    background: #78c850;
+    color: #fff;
+}
+
+.type-electric {
+    background: #f8d030;
+    color: #000;
+}
+
+.type-psychic {
+    background: #f85888;
+    color: #fff;
+}
+
+.type-ice {
+    background: #98d8d8;
+    color: #000;
+}
+
+.type-dragon {
+    background: #7038f8;
+    color: #fff;
+}
+
+.type-dark {
+    background: #705848;
+    color: #fff;
+}
+
+.type-fairy {
+    background: #ee99ac;
+    color: #000;
+}
+
+.type-normal {
+    background: #a8a878;
+    color: #000;
+}
+
+.type-poison {
+    background: #a040a0;
+    color: #fff;
+}
+
+.type-ground {
+    background: #e0c068;
+    color: #000;
+}
+
+.type-fighting {
+    background: #c03028;
+    color: #fff;
+}
+
+.type-flying {
+    background: #a890f0;
+    color: #000;
+}
+
+.type-bug {
+    background: #a8b820;
+    color: #000;
+}
+
+.type-rock {
+    background: #b8a038;
+    color: #000;
+}
+
+.type-ghost {
+    background: #705898;
+    color: #fff;
+}
+
+.type-steel {
+    background: #b8b8d0;
+    color: #000;
+}
+
+/* 🔍 Barre de recherche */
+.search-bar {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.search-input {
+    padding: 0.5rem 1rem;
+    width: 300px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
