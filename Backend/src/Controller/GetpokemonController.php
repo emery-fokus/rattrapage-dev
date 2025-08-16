@@ -2,18 +2,27 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
 
-final class GetpokemonController extends AbstractController
+class TestController extends AbstractController
 {
-    #[Route('/getpokemon', name: 'app_getpokemon')]
-    public function index(): JsonResponse
+    private HttpClientInterface $http;
+
+    public function __construct(HttpClientInterface $httpClient)
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/GetpokemonController.php',
-        ]);
+        $this->http = $httpClient;
+    }
+
+    #[Route('/test-api', name: 'test_api')]
+    public function testApi(): JsonResponse
+    {
+        $response = $this->http->request('GET', 'https://pokeapi.co/api/v2/pokemon/25');  //methode get pour afficher les donnees 
+        $data = $response->toArray();
+
+        return new JsonResponse($data);
     }
 }
+
+
