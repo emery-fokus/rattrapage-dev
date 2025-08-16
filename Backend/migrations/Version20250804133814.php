@@ -8,7 +8,7 @@ use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
 
 /**
- * Auto-generated Migration: Please modify to your needs!
+ *creaction de la migration qui importer les donnes de mon entity dans la base de donnes.
  */
 final class Version20250804133814 extends AbstractMigration
 {
