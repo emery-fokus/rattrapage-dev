@@ -2,10 +2,10 @@
 
 namespace App\Entity;
 
-use App\Repository\PoketypeRepository;
+use App\Repository\PoketypeRepository;//
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: PoketypeRepository::class)]
+#[ORM\Entity(repositoryClass: PoketypeRepository::class)] 
 class Poketype
 {
     #[ORM\Id]
