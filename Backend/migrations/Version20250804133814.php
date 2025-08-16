@@ -14,7 +14,7 @@ final class Version20250804133814 extends AbstractMigration
 {
     public function getDescription(): string
     {
-        return '';
+        return '';//
     }
 
     public function up(Schema $schema): void
@@ -27,5 +27,7 @@ final class Version20250804133814 extends AbstractMigration
     {
         // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('DROP TABLE poketype');
-    }
+    }7
+    4
+
 }
