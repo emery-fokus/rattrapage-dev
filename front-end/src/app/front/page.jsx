@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './Pokemonstyle.css';
 
-const API_URL = 'http://localhost:8000/api/pokemons';
+const API_URL = 'http://localhost:8000/api/pokemons';//
 
 function PokemonList() {
     const [pokemons, setPokemons] = useState([]);
